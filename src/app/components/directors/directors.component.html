@@ -1,0 +1,29 @@
+<section>
+  <h2>{{company.name}} - Officers</h2>
+
+  <div class="data">Company number <em>{{company.number}}</em></div>
+
+  <ul>
+    <li *ngFor="let officer of officers">
+      <div aria-hidden="true">
+        <mat-icon class="officer-icon" fontIcon="account_box"></mat-icon>
+      </div>
+      <div class="details">
+        <h3>{{officer.fullName}}</h3>
+        <div class="data">{{ officer.role }}</div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<div class="btn-row">
+  <button mat-raised-button color="primary" (click)="goBackToCompany()">
+    <mat-icon fontIcon="arrow_back"></mat-icon>
+    Back to {{company.name}}
+  </button>
+
+  <button mat-raised-button color="accent" (click)="goBackToSearch()">
+    <mat-icon fontIcon="home"></mat-icon>
+    Back to search
+  </button>
+</div>

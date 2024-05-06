@@ -1,0 +1,31 @@
+<h2>Search</h2>
+
+<div class="search-bar">
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Search</mat-label>
+
+      <input
+        type="text"
+        [formControl] = "searchFormControl"
+        id ="search"
+        class ="search-input"
+        matInput
+        placeholder = "Company Name or Number">
+      <mat-error>Please enter a company name or number to search for</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button
+      class="search-btn"
+      mat-mini-fab
+      color="primary"
+      [disabled]="searchFormControl.invalid"
+      (click)="doSearch()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+</div>
+
+<app-search-results></app-search-results>

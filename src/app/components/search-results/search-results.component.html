@@ -1,0 +1,24 @@
+<ng-container *ngIf="search.results$ | async as results">
+  <ng-container *ngIf="results.query">
+    <h2>Search Results</h2>
+
+    <p *ngIf="results.total === 0">
+      No companies found matching that query.
+    </p>
+
+    <ul>
+      <li *ngFor="let company of results.items">
+        <button (click)="goToCompany(company.number)">
+          <h3>{{ company.name }}</h3>
+          <div>
+            <em>{{ company.number }}</em>
+            - incorporated on {{ company.incorporated | date: 'd MMMM yyyy' }}
+          </div>
+          <address>{{ company.address }}</address>
+        </button>
+      </li>
+    </ul>
+
+    <div class="paginator">{{results.total}} results.</div>
+  </ng-container>
+</ng-container>

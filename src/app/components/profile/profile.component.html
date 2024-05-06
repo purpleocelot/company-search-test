@@ -1,0 +1,24 @@
+<div *ngIf="user.isLoggedIn">
+  <div class="user">
+    <mat-icon fontIcon="account_circle" aria-hidden="true"></mat-icon>
+    <div aria-label="Logged-in user">{{user.name()}}</div>
+  </div>
+
+  <button class="small-button " (click)="logOut()">
+    <mat-icon inline="true" fontIcon="logout" aria-hidden="true"></mat-icon>
+    Log out
+  </button>
+</div>
+
+<div *ngIf="!user.isLoggedIn">
+  <div class="user">
+    <mat-icon fontIcon="no_accounts" aria-hidden="true"></mat-icon>
+    <div>Not logged in</div>
+  </div>
+
+  <button class="small-button " (click)="logIn()">
+    <mat-icon inline="true" fontIcon="login" aria-hidden="true"></mat-icon>
+    Log in
+  </button>
+</div>
+

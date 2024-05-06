@@ -1,0 +1,33 @@
+div {
+  text-align: right;
+}
+
+a {
+  color: white;
+  font-weight: normal;
+}
+
+a:hover {
+  color: yellow;
+}
+
+.user {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 5px;
+}
+
+.small-button {
+  margin-top: 5px;
+  background-color: darkviolet;
+  color: white;
+  padding: 2px 5px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.small-button:hover {
+  cursor: pointer;
+  background-color: rgb(181, 61, 233);
+}

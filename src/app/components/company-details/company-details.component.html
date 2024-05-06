@@ -1,0 +1,29 @@
+<section *ngIf="hasData">
+  <h2>{{ company.name }}</h2>
+
+  <div class="data">Company number <em>{{company.number}}</em></div>
+
+  <h4>Registered office address</h4>
+  <address class="data">{{ company.address }}</address>
+
+  <h4>Company status</h4>
+  <div class="data">{{ company.status }}</div>
+
+  <h4>Company type</h4>
+  <div class="data">{{ company.type }}</div>
+
+  <h4>Incorporated on</h4>
+  <div class="data">{{ company.incorporated | date: 'd MMMM yyyy' }}</div>
+
+  <button class="officers-btn" mat-raised-button color="primary" (click)="listOfficers()">
+    <mat-icon fontIcon="group"></mat-icon>
+    List Officers
+  </button>
+
+</section>
+
+
+<button mat-raised-button color="accent" (click)="goBack()">
+  <mat-icon fontIcon="arrow_back"></mat-icon>
+  Back to search
+</button>

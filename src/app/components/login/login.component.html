@@ -1,0 +1,31 @@
+<section>
+  <h2>Log in</h2>
+
+  <p>
+    Type any old waffle in here, it's just a mock-up.
+    The log-in button works though.
+  </p>
+
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <mat-icon matSuffix color="primary">email</mat-icon>
+      <input type="text" id="email" matInput placeholder="Eg. someone@somewhere.com" value="">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <mat-icon matSuffix color="primary">key</mat-icon>
+      <input type="password" id="password" matInput placeholder="Password" value="">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button mat-raised-button color="primary" (click)="logIn()">
+      <mat-icon fontIcon="login"></mat-icon>
+      Log in
+    </button>
+  </div>
+</section>

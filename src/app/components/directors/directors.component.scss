@@ -1,0 +1,43 @@
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.officer-icon {
+  font-size: 60px;
+  width: 60px;
+  height: 60px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+h3 {
+  padding: 0px;
+  margin: 0px;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+.data {
+  font-weight: medium;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
